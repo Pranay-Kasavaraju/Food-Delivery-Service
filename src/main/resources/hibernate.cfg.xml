@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/deliverydb</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+        <!-- Annotated POJOs -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <mapping class="edu.neu.csye6220.fooddeliveryapplication.dao.model.Restaurant" />
+        <mapping class="edu.neu.csye6220.fooddeliveryapplication.dao.model.Customer" />
+        <mapping class="edu.neu.csye6220.fooddeliveryapplication.dao.model.Item" />
+        <mapping class="edu.neu.csye6220.fooddeliveryapplication.dao.model.User" />
+        <mapping class="edu.neu.csye6220.fooddeliveryapplication.dao.model.Cart" />
+        <mapping class="edu.neu.csye6220.fooddeliveryapplication.dao.model.CartItem" />
+        <mapping class="edu.neu.csye6220.fooddeliveryapplication.dao.model.Order" />
+        <mapping class="edu.neu.csye6220.fooddeliveryapplication.dao.model.OrderItem" />
+    </session-factory>
+</hibernate-configuration>
